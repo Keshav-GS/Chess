@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url(https://img.freepik.com/premium-photo/minimalist-polished-light-wooden-background_23-2148377171.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contentBeforeGameJoin {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#myBoardBeforeGameJoin {
+    box-sizing: content-box;
+    border: 10px solid brown;
+}
+
+#pairButton {
+    width: 320px;
+    height: 220px;
+    border: 0.4rem solid blue;
+    font-size: 3rem;
+    font-weight: bolder;
+    padding: 0.7rem;
+    border-radius: 50%;
+    background-color: #11b4e1;
+    color: white;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+#pairButton:hover {
+    color: #11b4e1;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(8, 213, 11, 0.4), 0 6px 20px 0 rgba(27, 168, 211, 0.4);
+}

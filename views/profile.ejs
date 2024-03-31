@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/profileStyles.css">
+    <link rel="stylesheet" href="/stylesheets/navbarStyles.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <a href="http://localhost:3000/ChessWebsite/home">Home</a>
+        <a href="http://localhost:3000/ChessWebsite/profile" style="color: red;">Profile</a>
+        <a href="http://localhost:3000/ChessWebsite/playUser">Play-user</a>
+        <a href="http://localhost:3000/ChessWebsite/playBot">Play-bot</a>
+        <a href="http://localhost:3000/ChessWebsite/boardToFen">Image-To-Fen</a>
+        <a href="http://localhost:3000/ChessWebsite/chat">Chat</a>
+        <form action="http://localhost:3000/ChessWebsite/logout" method="get">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+    <div id="content">
+        <div class="list">
+            <h1>Hey <%= userName%>!</h1>
+            <ul>
+              <li><span>You joined chess-website on <%= joinDate%>.</span></li>
+              <li><span>Your rating is <%= rating%>.</span></li>
+              <li><span>You have played <%= whiteGames%> game(s) as white.</span></li>
+              <li><span>You have played <%= blackGames%> game(s) as black.</span></li>
+              <li><span>You have won <%= wins%> game(s) in total.</span></li>
+              <li><span>You have lost <%= losses%> game(s) in total.</span></li>
+            </ul>
+          </div>
+    </div>
+
+</body>
+
+</html>

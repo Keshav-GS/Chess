@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/navbarStyles.css">
+    <link rel="stylesheet" href="/stylesheets/playBotStyles.css">
+    <link rel="stylesheet" href="/lib/chessboardjs/css/chessboard-0.3.0.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+    <script src="/esm/chess.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <a href="http://localhost:3000/ChessWebsite/home">Home</a>
+        <a href="http://localhost:3000/ChessWebsite/profile">Profile</a>
+        <a href="http://localhost:3000/ChessWebsite/playUser">Play-user</a>
+        <a href="http://localhost:3000/ChessWebsite/playBot">Play-bot</a>
+        <a href="http://localhost:3000/ChessWebsite/boardToFen">Image-To-Fen</a>
+        <a href="http://localhost:3000/ChessWebsite/chat">Chat</a>
+        <form action="http://localhost:3000/ChessWebsite/logout" method="get">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+    <h1 id="heading">PLAY  AGAINST  BOT</h1>
+    <div id="content">
+        <div id="boa">
+            <div id="myBoard" style="width: 450px"></div>
+          </div>
+          <div id="vbutton">
+          <input class="game-button" type="button" id="voiceBtn"
+                    value="Start voice recognition" />
+            </div>
+          <div class="container1">
+            <label>Status:</label>
+            <div id="status"></div>
+            <label> | Last Voice Input:</label>
+            <div id="voice"></div>
+            </div>
+            <div class="container">
+              <label for="fen">FEN:</label>
+              <div id="fen"></div>
+            </div>
+          <div class="container4">
+          <div class="level">
+            Select Difficulty level:
+            <select id="search-depth">
+                <option value="1">Beginner</option>
+                <option value="3" selected>Intermediate</option>
+            </select>
+            </div>
+          </div>
+          <div id="pdfb">
+            <button id="resignBtn">Resign</button>
+            <button id="generatePdfBtn">Generate Scoresheet</button>
+          </div>
+    </div>
+
+</body>
+<script src="/lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="/lib/chessboardjs/js/chessboard-0.3.0.js"></script>
+<script src="/javascripts/playBotscript.js"></script>
+</html>

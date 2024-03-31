@@ -1,0 +1,49 @@
+#navbar {
+    position: sticky;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    background-color: #ececec;
+    color: #5585b5;
+    border-bottom: 0.2rem solid gray;
+}
+
+#navbar > a {
+    text-decoration: none;
+    font-size: 2.2rem;
+    border-radius: 3vmin;
+    color: #455d7a;
+    padding: 0.5rem;
+    border: 2px solid gray;
+    background-color:rgba(8, 213, 11, 0.4);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+#navbar > form > button {
+    border: 0.3rem solid green;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 3vmin;
+    background-color: #155263;
+    color: #ff9a3c;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s;
+}
+
+#navbar > a:hover {
+    cursor: pointer;
+    background-color: #ff9a3c;
+}
+
+#navbar > form > button:hover {
+    cursor: pointer;
+    margin: 0 -0.2rem 0 -0.2rem;
+    padding: 0.7rem;
+    box-shadow: 0 4px 8px 0 rgba(8, 213, 11, 0.4), 0 6px 20px 0 rgba(27, 168, 211, 0.4);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/navbarStyles.css">
+    <link rel="stylesheet" href="/stylesheets/homeStyles.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <a href="http://localhost:3000/ChessWebsite/home" style="color: red;">Home</a>
+        <a href="http://localhost:3000/ChessWebsite/profile">Profile</a>
+        <a href="http://localhost:3000/ChessWebsite/playUser">Play-user</a>
+        <a href="http://localhost:3000/ChessWebsite/playBot">Play-bot</a>
+        <a href="http://localhost:3000/ChessWebsite/boardToFen">Image-To-Fen</a>
+        <a href="http://localhost:3000/ChessWebsite/chat">Chat</a>
+        <form action="http://localhost:3000/ChessWebsite/logout" method="get">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+    <div id="content">
+        <h1>Welcome to chess-website!</h1>
+        <div id="description">
+            <ul>
+                <li>Play against others online!</li>
+                <li>Challenge bots</li>
+                <li>Chat with fellow players</li>
+                <li>View your statistics!</li>
+                <li>EXCLUSIVE: Convert image to FEN!</li>
+            </ul>
+        </div>
+        <div id="feedback">
+            <form action="http://localhost:3000/ChessWebsite/home/submitFeedback" method="post">
+                <textarea name="feedbackContent" id="feedbackContent" cols="30" rows="10" placeholder="Feel free to submit as many feedback forms as you wish."></textarea>
+                <button type="submit" id="feedbackBtn">Submit feedback</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script src="/javascripts/homeScripts.js"></script>
+
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/boardToFenStyles.css">
+    <link rel="stylesheet" href="/stylesheets/navbarStyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0/dist/tf.min.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <a href="http://localhost:3000/ChessWebsite/home">Home</a>
+        <a href="http://localhost:3000/ChessWebsite/profile">Profile</a>
+        <a href="http://localhost:3000/ChessWebsite/playUser">Play-user</a>
+        <a href="http://localhost:3000/ChessWebsite/playBot">Play-bot</a>
+        <a href="http://localhost:3000/ChessWebsite/boardToFen" style="color: red;">Image-To-Fen</a>
+        <a href="http://localhost:3000/ChessWebsite/chat">Chat</a>
+        <form action="http://localhost:3000/ChessWebsite/logout" method="get">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+    <h1 id="heading">Chessboard To FEN Converter</h1>
+    <div id="content">
+        
+        <div class="imgupload">
+            <!-- actual upload which is hidden -->
+    <input type="file" id="actual-btn" hidden/>
+    
+    <!-- our custom upload button -->
+    <span id="borders">
+    <label for="actual-btn">Choose File</label>
+    
+    <!-- name of file chosen -->
+    <span id="file-chosen">No file chosen</span>
+    </span>
+    
+        </div>
+        <div id="message"></div>
+        <div class="images">      
+        </div>  
+        <div class="bflex">
+            <button class="button" id="predict-btn">Predict</button>
+        </div>
+        <div id="output"></div>
+        <script src="/javascripts/FENscript.js"></script>
+    </div>
+
+</body>
+
+</html>

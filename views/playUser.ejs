@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/navbarStyles.css">
+    <link rel="stylesheet" href="/stylesheets/loadingStyles.css">
+    <link rel="stylesheet" href="/stylesheets/userGameStyles.css"> <!--this is for the initial page look-->
+    <link rel="stylesheet" href="/stylesheets/playUserStyles.css"> <!--this is for the view when user joins game-->
+    <link rel="stylesheet" href="/lib/chessboardjs/css/chessboard-0.3.0.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <a href="http://localhost:3000/ChessWebsite/home">Home</a>
+        <a href="http://localhost:3000/ChessWebsite/profile">Profile</a>
+        <a href="http://localhost:3000/ChessWebsite/playUser" style="color: red;">Play-user</a>
+        <a href="http://localhost:3000/ChessWebsite/playBot">Play-bot</a>
+        <a href="http://localhost:3000/ChessWebsite/boardToFen">Image-To-Fen</a>
+        <a href="http://localhost:3000/ChessWebsite/chat">Chat</a>
+        <form action="http://localhost:3000/ChessWebsite/logout" method="get">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+    <div id="contentBeforeGameJoin"> <!--this content will be hiddent when user joins game-->
+        <div id="myBoardBeforeGameJoin" style="width: 450px;"></div>
+        <div id="pairing">
+            <button id="pairButton">Play game</button>
+            <div class='spinner-displayer'></div>
+        </div>
+    </div>
+    <div id="content" style="display: none;"> <!--this content will be displayed when user joins game-->
+        <div id="boardInfo">
+            <div id="opponentInfo">OppNamePlaceholder</div>
+            <div id="myBoard" style="width: 420px;"></div>
+            <div id="myInfo">MyNamePlaceholder</div>
+        </div>
+        <div id="details">
+            <div id="detailsTitle">PGN: </div>
+            <div id="pgn"></div>
+            <div id="buttons">
+                <button id="drawButton">Draw</button>
+                <button id="resignButton">Resign</button>
+            </div>
+            <div id="status"></div>
+        </div>
+    </div>
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="/esm/chess.js"></script>
+<script src="/lib/chessboardjs/js/chessboard-0.3.0.js"></script>
+<script src="/javascripts/playUserScript.js"></script> <!--this is for the initial page look-->
+<script src="/javascripts/userGameScript.js"></script> <!--this is for the view when user joins game; contains game logic-->
+<script src="/javascripts/loadingScript.js"></script>
+
+</html>

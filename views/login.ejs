@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/loginStyles.css">
+    <title>Chess</title>
+</head>
+
+<body>
+    <div id="background">
+        <img src="/images/bg1.jpeg" alt="Chess image background 1">
+        <img src="/images/bg2.jpeg" alt="Chess image background 2" >
+        <img src="/images/bg3.jpeg" alt="Chess image background 3">
+        <h1>Chess</h1>
+        <div id="main">
+            <div id="transparentImg">
+                <img src="/images/transparentImg.png" alt="Transparent chess image">
+            </div>
+            <div id="form-div">
+                <form id="loginForm" action="http://localhost:3000/ChessWebsite/login"  method="post">
+                    <input type="text" name="username" id="usrnField" placeholder="Username" required>
+                    <input type="password" name="password" id="passwField" placeholder="Password" required>
+                    <button type="submit" id="loginButton">Login</button>
+                </form>
+                <form id="signUpForm" action="http://localhost:3000/ChessWebsite/signup"  method="post">
+                    <input type="text" name="username" id="usrnField" placeholder="Username" required>
+                    <input type="password" name="password" id="passwField" placeholder="Password" required minlength="1">
+                    <button type="submit" id="signUpButton">Sign Up</button>
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>

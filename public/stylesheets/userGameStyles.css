@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url(https://img.freepik.com/premium-photo/minimalist-polished-light-wooden-background_23-2148377171.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#content {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#boardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#opponentInfo, #myInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.3rem;
+    padding-right: 0.7rem;
+    background-color: white;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+#myInfo {
+    color: #f95959;
+    border-bottom-left-radius: 1.5vmin;
+    border-bottom-right-radius: 1.5vmin;
+}
+
+#opponentInfo {
+    color: blueviolet;
+    border-top-left-radius: 1.5vmin;
+    border-top-right-radius: 1.5vmin;
+}
+
+#myBoard {
+    box-sizing: content-box;
+    border: 5px solid brown;
+    border-right: 5px solid brown;
+}
+
+#details {
+    border: 5px solid black;
+    height: 33rem;
+    width: 23rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: yellowgreen;
+    font-size: larger;
+    font-weight: bolder;
+    border-radius: 1vmin;
+}
+
+#detailsTitle {
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+#pgn {
+    width: 100%;
+    min-height: 19.5rem;
+    max-height: 19.5rem;
+    padding: 1rem;
+    margin-bottom: auto;
+    font-size: 2rem;
+    background-color: whitesmoke;
+    border-bottom: 5px solid palevioletred;
+    overflow: auto;
+}
+
+#buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-weight: bolder;
+    color: whitesmoke;
+    margin-bottom: 1.2rem;
+}
+
+#drawButton {
+    font-size: larger;
+    font-weight: bolder;
+    width: 9rem;
+    height: 4rem;
+    border-radius: 3vmin;
+    padding: 0.4rem;
+    background-color: #11b4e1;
+    border: 3px solid black;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+#resignButton {
+    font-size: larger;
+    font-weight: bolder;
+    width: 9rem;
+    height: 4rem;
+    border-radius: 3vmin;
+    padding: 0.4rem;
+    background-color: red;
+    border: 3px solid black;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+#drawButton:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 76, 153, 0.4), 0 6px 20px 0 rgba(0, 102, 204, 0.4);
+    background-color: whitesmoke;
+    color: #11b4e1;
+}
+
+#resignButton:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 76, 153, 0.4), 0 6px 20px 0 rgba(0, 102, 204, 0.4);
+    background-color: whitesmoke;
+    color: red;
+}
+
+#status {
+    overflow: auto;
+    background-color: white;
+    color: orange;
+    width: 100%;
+    font-size: 1.6rem;
+    min-height: 3.6rem;
+    max-height: 3.6rem;
+    font-weight: bolder;
+    font-style: italic;
+    padding: 0.3rem;
+    border-bottom-left-radius: 1vmin;
+    border-bottom-right-radius: 1vmin;
+    border-top: 5px solid palevioletred;
+}
